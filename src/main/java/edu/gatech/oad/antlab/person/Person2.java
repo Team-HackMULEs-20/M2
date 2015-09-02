@@ -32,13 +32,13 @@ public class Person2 {
 	private String calc(String input) {
 	  Random r = new Random();
 	  char a[] = input.toCharArray();
-	  for(int i = 0; i < a.length-1 ;i++ ) {
+	  for(int i = 0; i < a.length - 1; i++) {
 	    int j = r.nextInt(a.length - 1);
 	    char temp = a[i];
 	    a[i] = a[j];
 	    a[j] = temp;
 	  }
-	  return a.toString();
+	  return new String(a);
 	}
 	/**
 	 * Return a string rep of this object
