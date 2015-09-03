@@ -8,17 +8,6 @@ sourceCompatibility = '1.8'
 version '1.0'
 libsDirName = '../lib'
 
-////Set up a location of repositories so that any needed library dependencies can be downloaded
-//repositories {
-//    flatDir{
-//        dirs 'lib'
-//    }
-//}
-
-//dependencies{
-//    compile name: 'resources'
-//}
-
 dependencies {
     compile files('lib/resources.jar')
     //compile 'lib/resources.jar'
@@ -31,5 +20,3 @@ jar {
         attributes 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : 'resources.jar'
     }
 }
-
-
