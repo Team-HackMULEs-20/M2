@@ -11,6 +11,7 @@ libsDirName = '../lib'
 dependencies {
     compile files('lib/resources.jar')
     //compile 'lib/resources.jar'
+
 }
 
 
