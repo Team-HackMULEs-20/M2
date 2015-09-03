@@ -1,0 +1,23 @@
+defaultTasks 'jar'
+
+//Import java related tasks like compileJava, compileJavaTest, clean, javadoc, jar
+apply plugin: 'java'
+
+//Set up variables (properties)
+sourceCompatibility = '1.8'
+version '1.0'
+libsDirName = '../lib'
+
+dependencies {
+    compile files('lib/resources.jar')
+    //compile 'lib/resources.jar'
+
+}
+
+
+//Define the contents of the jar file
+jar {
+    manifest {
+        attributes 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : 'resources.jar'
+    }
+}
